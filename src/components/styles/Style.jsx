@@ -728,7 +728,6 @@ export const MyRightSuggested = styled.div`
     
       .user_details{
         .name{
-          font-size: 12px; 
           margin-right: 22px; 
           margin-top: 15px; 
           top: 1010px;

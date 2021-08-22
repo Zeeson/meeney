@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { PostBoardCont } from "../styles/Style";
 import CreatePost from "./CreatePost";
 import user2 from "../../assets/images/user2.png";
 import Post from "../cards/Post";
 
+import { FiExternalLink} from "react-icons/fi";
+import { MdReport } from "react-icons/md";
+
 const PostBoard = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <PostBoardCont>
       <div className="tab">
@@ -14,6 +23,20 @@ const PostBoard = () => {
       </div>
 
       <div className="user_profile">
+        <div className="btn" onClick={handleClick}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className={toggle ? "dropdown active" : "dropdown"}>
+          <div>
+            <FiExternalLink className="icon" /> Copy Link
+          </div>
+          <div>
+            <MdReport className="icon" />
+            Report post
+          </div>
+        </div>
         <div className="user_image">
           <img src={user2} alt="" />
         </div>
@@ -63,7 +86,7 @@ const PostBoard = () => {
       </div>
 
       <CreatePost />
-      <Post/>
+      <Post />
     </PostBoardCont>
   );
 };

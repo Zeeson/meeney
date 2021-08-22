@@ -5,19 +5,21 @@ import { NavItem, NavList, Search } from "../styles/Style";
 import flag from '../../assets/images/flag.png'
 import logo from '../../assets/images/meeny-logo.png'
 
+
 const NavLinks = ({ toggle }) => {
   return (
     <NavList className={toggle ? "active" : ""}>
       <NavItem>
         <NavLink to="/" className="nav_link">
-                  <div className="country">
-                      <img src={flag} alt="" />
+          <div className="country">
+            <img src={flag} alt="" />
           </div>
         </NavLink>
       </NavItem>
       <NavItem>
         <NavLink to="/" className="nav_link">
           <div className="message">
+            <div className="counter">20</div>
             <FaEnvelope />
           </div>
         </NavLink>
@@ -25,6 +27,7 @@ const NavLinks = ({ toggle }) => {
       <NavItem>
         <NavLink to="/" className="nav_link">
           <div className="notification">
+            <div className="counter">50+</div>
             <FaBell />
           </div>
         </NavLink>

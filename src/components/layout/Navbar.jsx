@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import { FaArrowDown, FaBars, FaTimes } from "react-icons/fa";
+import { IoIosArrowDown} from "react-icons/io";
 import { Nav, User, Toggle } from "../styles/Style";
 import NavLinks from "./NavLinks";
 import user from '../../assets/images/profile.png'
@@ -32,7 +33,7 @@ const Navbar = (props) => {
                   <img src={user} alt="" />
               </div>
               
-              <FaArrowDown className='dropdown_icon'/>
+              <IoIosArrowDown className='dropdown_icon'/>
               <span className="name">John Doe</span>
               <ul className="dropdown">
                   <li>dropdown</li>

@@ -7,6 +7,14 @@ import { SideNavCont } from '../styles/Style'
 const SideNav = () => {
     return (
         <SideNavCont>
+            <div className="switch">
+                <h5>Switch Account</h5>
+                <div className="tab">
+                    <span className="active">Social</span>
+                    <span>Business</span>
+                </div>
+            </div>
+
             <Menu/>
 
             <MyPagesNav/>

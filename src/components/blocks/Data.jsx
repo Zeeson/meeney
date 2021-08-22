@@ -9,7 +9,8 @@ import lady from '../../assets/images/user2.png'
 export const MenuData = [
   {
         icon: <MdRssFeed />,
-      title: 'Feed',
+        title: 'Feed',
+      class: 'active',
   },
   {
         icon: <HiOutlinePhotograph/>,

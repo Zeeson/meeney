@@ -9,7 +9,7 @@ const Menu = () => {
       <MenuCont>
         {MenuData.map((el) => (
           <li>
-                <Link to="/">
+                <Link to="/" className={el.class}>
                     <span className="icon">{el.icon}</span>
                {el.title}
             </Link>

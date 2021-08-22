@@ -1,6 +1,4 @@
 import React from "react";
-import { FaWifi } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { MyRightNavCont, ListingTitle } from "../styles/Style";
 import { SuggestedListing } from "./Data";
 import ProgressBar from '../layout/ProgressBar'

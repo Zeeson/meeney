@@ -10,6 +10,12 @@ export const Nav = styled.div`
   border-radius: 0 0 20px 20px;
   width: 100%;
   z-index: 999;
+  position: relative;
+ 
+
+  @media (max-width: 900px) {
+    padding: 5% 5% 2%;
+  }
 
   .eclipse {
     position: absolute;
@@ -17,15 +23,29 @@ export const Nav = styled.div`
     height: 350px;
     border-radius: 50%;
     background: var(--c-d);
+
+    @media (max-width: 900px) {
+      width: 250px;
+      height: 250px;
+    }
   }
 
   .eclipse_1 {
     left: -230px;
     top: -150px;
+    @media (max-width: 900px) {
+      left: -210px;
+      top: -70px;
+    }
   }
+
   .eclipse_2 {
     top: -250px;
     left: 20px;
+    @media (max-width: 900px) {
+      left: -30px;
+      top: -160px;
+    }
   }
 
   .navlinks {
@@ -60,7 +80,8 @@ export const Nav = styled.div`
 
   @media (max-width: 900px) {
     .active {
-      right: 30px;
+      right: 0;
+      opacity: 1;
     }
   }
 `;
@@ -110,9 +131,12 @@ export const NavList = styled.li`
 
   @media (max-width: 900px) {
     position: absolute;
-    top: 10vh;
-    right: -100vw;
+    top: 25vh;
+    right: 0;
     width: auto;
+    opacity: 0;
+    flex-direction: column-reverse;
+    align-items: flex-start;
     transition: all 0.5s linear;
     background: var(--d);
     border-radius: 10px;
@@ -237,7 +261,7 @@ export const MenuCont = styled.ul`
   background: #490057 0% 0% no-repeat padding-box;
   box-shadow: 2px 6px 20px #0000001c;
   border-radius: 16px;
-height: auto;
+  height: auto;
   li {
     display: block;
     margin: 20px 0;
@@ -247,15 +271,29 @@ height: auto;
     }
   }
 
-
-
   a {
     color: var(--c);
     font-size: 18px;
   }
-  
+
   .active {
     color: var(--c-2);
+  }
+
+  @media (max-width: 900px) {
+    li {
+      display: inline-block;
+      margin:5px 0 ;
+      margin-right: 15px;
+
+      .icon {
+        margin-right: 5px;
+      }
+    }
+     a {
+    color: var(--c);
+    font-size: 12px;
+  }
   }
 `;
 
@@ -264,6 +302,10 @@ export const Dash = styled.div`
   grid-template-columns: auto 50% auto;
   grid-gap: 30px;
   padding: 2% 5%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const SideNavCont = styled.div`
@@ -290,7 +332,7 @@ export const SideNavCont = styled.div`
     align-items: center;
     background: var(--c-5);
     color: var(--c);
-   overflow: hidden;
+    overflow: hidden;
     border-radius: 4px;
   }
 
@@ -302,6 +344,12 @@ export const SideNavCont = styled.div`
   span.active {
     background: var(--c-1);
   }
+
+  @media (max-width: 900px) {
+    .switch {
+      display: none;
+    }
+  }
 `;
 
 export const MyPagesNavCont = styled.div`
@@ -311,6 +359,11 @@ export const MyPagesNavCont = styled.div`
   background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 13px;
   height: auto;
+  @media (max-width: 900px) {
+    
+      display: none;
+    
+  }
 
   .top {
     margin-bottom: 10px;
@@ -395,6 +448,10 @@ export const CreatePostConst = styled.div`
     grid-template-columns: auto 15%;
     grid-gap: 30px;
 
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+
     input {
       width: 100%;
       padding: 15px;
@@ -417,9 +474,15 @@ export const CreatePostConst = styled.div`
 
   .attatchments {
     width: 400px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+
+    @media (max-width: 900px) {
+  width: 200px;
+  
+    }
 
     li {
       display: flex;
@@ -462,6 +525,10 @@ export const PostBoardCont = styled.div`
       color: #9B9B9B;
       opacity: 1;
     }
+    @media (max-width: 900px) {
+     font-size: 12px;
+    }
+
     &::after {
       content: "";
       width: 100%;
@@ -506,6 +573,9 @@ export const PostBoardCont = styled.div`
     border-radius: 10px;
     margin-bottom: 20px;
     position: relative;
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
 
     .btn {
       position: absolute;
@@ -534,7 +604,7 @@ export const PostBoardCont = styled.div`
       font-size: 12px;
       display: none;
       opacity: 0;
-      transition: .5s;
+      transition: 0.5s;
 
       &.active {
         display: block;
@@ -658,9 +728,11 @@ export const MyRightNavCont = styled.div`
   background: #E8D8EC 0% 0% no-repeat padding-box;
   border-radius: 16px;
   opacity: 1;
-  }
-  }
-    .page_list {
+
+  @media (max-width: 900px) {
+        display: none;
+    }
+  .page_list {
     display: block;
 
     li {
@@ -871,6 +943,10 @@ export const PostCont = styled.div`
   height: auto;
   margin: 20px 0;
   color: var(--c-5);
+
+  @media (max-width: 900px) {
+grid-template-columns: 1fr;
+  }
 
   .post_img {
     width: 100%;

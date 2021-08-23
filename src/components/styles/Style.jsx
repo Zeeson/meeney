@@ -726,6 +726,11 @@ export const PostBoardCont = styled.div`
     .user_stats .page_listing li {
       font-size: 10px;
       margin: 3px 0;
+      text-align: left;
+      font: normal normal bold 10px/16px Work Sans;
+      letter-spacing: 0px;
+      color: #490057;
+      opacity: 1;
     }
   }
 `;

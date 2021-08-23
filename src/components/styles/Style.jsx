@@ -255,19 +255,21 @@ export const LinkItems = styled.li`
 `;
 
 export const MenuCont = styled.ul`
-  width: 100%;
+  margin-top: -100px; 
+  width: 260px;
+  height: 340px;
   background: var(--c-1);
   padding: 10px 15px;
   background: #490057 0% 0% no-repeat padding-box;
   box-shadow: 2px 6px 20px #0000001c;
   border-radius: 16px;
-  height: auto;
   li {
     display: block;
-    margin: 20px 0;
+    margin: 35px 0;
 
     .icon {
       margin-right: 10px;
+     justify-content: around; 
     }
   }
 
@@ -318,7 +320,7 @@ export const SideNavCont = styled.div`
     padding: 10px;
     background: var(--c);
     text-align: center;
-    height: auto;
+    height: 80px;
     border-radius: 8px;
 
     h5 {
@@ -419,7 +421,44 @@ export const MyPagesNavCont = styled.div`
       justify-content: space-between;
       align-items: center;
       margin: 20px 0;
+      background: #F3F3F3 0% 0% no-repeat padding-box;
+      opacity: 1;
 
+      .name{
+        margin-right: 40px;
+        text-align: left;
+        font: normal normal bold 15px/19px Work Sans;
+        letter-spacing: 0px;
+        color: #490057;
+        opacity: 1;
+      }
+      .page{
+        text-align: left;
+        font: normal normal normal 10px/17px Work Sans;
+        letter-spacing: 0px;
+        color: #9B9B9B;
+        opacity: 1;
+      }
+      .pin{
+        margin-right: 10px; 
+      }
+
+      .btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        width: 5px;
+        height: 5px;
+        border-radius: 50px;
+        background: var(--c-5);
+      }
+    }
       .user_img {
         width: 50px;
         height: 50px;

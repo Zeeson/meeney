@@ -14,7 +14,6 @@ const SideNav = () => {
                     <span>Business</span>
                 </div>
             </div>
-
             <Menu/>
 
             <MyPagesNav/>

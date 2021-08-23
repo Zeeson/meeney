@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaPlusCircle, FaSearch } from 'react-icons/fa'
 import { MyPagesNavCont } from '../styles/Style'
 import { UserPages } from './Data' 
 import { TiPin } from 'react-icons/ti'
 
-
 const MyPagesNav = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+
     return (
       <MyPagesNavCont>
         <div className="top">
@@ -22,15 +27,20 @@ const MyPagesNav = () => {
             
             <ul className="page_list">
                 {UserPages.map((el) => (
-                    <li>
+                    <li className="each_page">
                         <div className="user_img">
                             <img src={el.image} alt="" />
                         </div>
                         <div className="user_details">
                             <h5 className="name">{el.name}</h5>
-                            <span><small>{el.page}</small></span>
+                            <span className="page"><small>{el.page}</small></span>
                         </div>
-                        <TiPin/>
+                        <div className="btn" onClick={handleClick}>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                        </div>
+                        <TiPin className="pin"/>
                 </li>
                 )) }
             </ul>

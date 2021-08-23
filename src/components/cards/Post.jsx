@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { PostCont } from "../styles/Style";
 import Comment from "./Comment";
 import { post } from "./PostData";
@@ -8,6 +8,12 @@ import { BsBookmark } from "react-icons/bs";
 import { IoIosShareAlt } from "react-icons/io";
 
 const Post = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <>
       {post.map((el) => (
@@ -28,6 +34,11 @@ const Post = () => {
                   <span>{el.likes}</span>
                   <span>{el.replies}</span>
                 </div>
+                <div className="btn" onClick={handleClick}>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  </div>
               </div>
             </div>
             <p>{el.text}</p>

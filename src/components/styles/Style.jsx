@@ -283,18 +283,22 @@ export const MenuCont = styled.ul`
   }
 
   @media (max-width: 900px) {
+  margin-top: 0; 
+  width: 100%;
+  height: auto;
+     
     li {
       display: inline-block;
       margin:5px 0 ;
-      margin-right: 15px;
+      margin-right: 5px;
 
       .icon {
-        margin-right: 5px;
+        margin-right: 2px;
       }
     }
      a {
     color: var(--c);
-    font-size: 12px;
+    font-size: 10px;
   }
   }
 `;
@@ -378,7 +382,7 @@ export const MyPagesNavCont = styled.div`
       padding: 5px;
       border-radius: 20px;
       color: var(--c);
-      fontsize: 8px;
+      font-size: 8px;
     }
 
     .icon {
@@ -551,7 +555,7 @@ export const PostBoardCont = styled.div`
 
     .commmunity{
       text-align: left;
-      font: normal normal normal 20px/16px Work Sans;
+      font:20px;
       letter-spacing: 0px;
       color: #9B9B9B;
       opacity: 1;
@@ -565,7 +569,7 @@ export const PostBoardCont = styled.div`
       opacity: 1;
     }
     @media (max-width: 900px) {
-     font-size: 12px;
+     font-size: 10px;
     }
 
     &::after {
@@ -886,7 +890,8 @@ export const SuggestedTap = styled.div`
     }
   }
 
-`
+`;
+
 export const MyRightSuggested = styled.div`
     top: 979px;
     left: 1450px;
@@ -896,8 +901,8 @@ export const MyRightSuggested = styled.div`
     background: #E8D8EC 0% 0% no-repeat padding-box;
     border-radius: 16px;
     opacity: 1;
-  }
-  }
+  
+  
 
   .page_list {
     display: block;
@@ -965,6 +970,7 @@ export const MyRightSuggested = styled.div`
           
         }
       }
+
       .my_color {
         color: #fbb03b;
       }
@@ -972,6 +978,7 @@ export const MyRightSuggested = styled.div`
       p {
         font-size: 10px;
       }
+    
     }
   }
 `;
